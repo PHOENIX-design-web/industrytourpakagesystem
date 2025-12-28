@@ -1,0 +1,949 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73EE8A54-C584-4BB8-9AFF-70AD5FAA498A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>industrytourpakagesystem</RootNamespace>
+    <AssemblyName>industrytourpakagesystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\CategoryAdd.aspx" />
+    <Content Include="Admin\CategoryView.aspx" />
+    <Content Include="Admin\css\bootstrap.min.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\CustomerviewReport.aspx" />
+    <Content Include="Admin\DistrictReg.aspx" />
+    <Content Include="Admin\DistrictView.aspx" />
+    <Content Include="Admin\DistrictwisecustomerReport.aspx" />
+    <Content Include="Admin\DistrictwiseindustryReport.aspx" />
+    <Content Include="Admin\img\testimonial-1.jpg" />
+    <Content Include="Admin\img\testimonial-2.jpg" />
+    <Content Include="Admin\img\user.jpg" />
+    <Content Include="Admin\IndustryConform.aspx" />
+    <Content Include="Admin\IndustrypackegeReport.aspx" />
+    <Content Include="Admin\IndustryviewReport.aspx" />
+    <Content Include="Admin\js\main.js" />
+    <Content Include="Admin\lib\chart\chart.min.js" />
+    <Content Include="Admin\lib\easing\easing.js" />
+    <Content Include="Admin\lib\easing\easing.min.js" />
+    <Content Include="Admin\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Admin\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Admin\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Admin\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Admin\lib\tempusdominus\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="Admin\lib\tempusdominus\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="Admin\lib\tempusdominus\js\moment-timezone.min.js" />
+    <Content Include="Admin\lib\tempusdominus\js\moment.min.js" />
+    <Content Include="Admin\lib\tempusdominus\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="Admin\lib\tempusdominus\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="Admin\lib\waypoints\links.php" />
+    <Content Include="Admin\lib\waypoints\waypoints.min.js" />
+    <Content Include="Admin\LocationReg.aspx" />
+    <Content Include="Admin\LocationView.aspx" />
+    <Content Include="Admin\MonthwiseReport.aspx" />
+    <Content Include="Admin\RequestPie.aspx" />
+    <Content Include="Admin\SampleForm.aspx" />
+    <Content Include="Admin\SampleView.aspx" />
+    <Content Include="Admin\YearwiseReport.aspx" />
+    <Content Include="Customer\AssignMemberView.aspx" />
+    <Content Include="Customer\ChangePass.aspx" />
+    <Content Include="Customer\ConformationView.aspx" />
+    <Content Include="Customer\css\bootstrap.min.css" />
+    <Content Include="Customer\css\datepicker.css" />
+    <Content Include="Customer\css\templatemo-style.css" />
+    <Content Include="Customer\CustomerHome.aspx" />
+    <Content Include="Customer\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Customer\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Customer\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Customer\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Customer\img\africa.png" />
+    <Content Include="Customer\img\antartica.png" />
+    <Content Include="Customer\img\asia.png" />
+    <Content Include="Customer\img\australia.png" />
+    <Content Include="Customer\img\banner.jpg" />
+    <Content Include="Customer\img\button-curve.png" />
+    <Content Include="Customer\img\dots-3.png" />
+    <Content Include="Customer\img\europe.png" />
+    <Content Include="Customer\img\logo.png" />
+    <Content Include="Customer\img\north-america.png" />
+    <Content Include="Customer\img\south-america.png" />
+    <Content Include="Customer\img\tm-img-01.jpg" />
+    <Content Include="Customer\img\tm-img-02.jpg" />
+    <Content Include="Customer\img\tm-img-03.jpg" />
+    <Content Include="Customer\img\tm-img-04.jpg" />
+    <Content Include="Customer\img\tm-img-05.jpg" />
+    <Content Include="Customer\img\tm-img-06.jpg" />
+    <Content Include="Customer\img\tm-img-07.jpg" />
+    <Content Include="Customer\js\bootstrap.min.js" />
+    <Content Include="Customer\js\datepicker.min.js" />
+    <Content Include="Customer\js\jquery-1.11.3.min.js" />
+    <Content Include="Customer\js\jquery.scrollTo.min.js" />
+    <Content Include="Customer\js\jquery.singlePageNav.min.js" />
+    <Content Include="Customer\js\popper.min.js" />
+    <Content Include="Customer\ProfileView.aspx" />
+    <Content Include="Customer\Search.aspx" />
+    <Content Include="Customer\slick\ajax-loader.gif" />
+    <Content Include="Customer\slick\fonts\slick.svg" />
+    <Content Include="Customer\slick\slick-theme.css" />
+    <Content Include="Customer\slick\slick.css" />
+    <Content Include="Customer\slick\slick.js" />
+    <Content Include="Customer\slick\slick.min.js" />
+    <Content Include="Customer\ViewMore.aspx" />
+    <Content Include="Guest\css\bootstrap.min.css" />
+    <Content Include="Guest\css\datepicker.css" />
+    <Content Include="Guest\css\templatemo-style.css" />
+    <Content Include="Guest\CustomerReg.aspx" />
+    <Content Include="Guest\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Guest\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Guest\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Guest\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Guest\ForgotPass.aspx" />
+    <Content Include="Guest\GuestHome.aspx" />
+    <Content Include="Guest\img\africa.png" />
+    <Content Include="Guest\img\antartica.png" />
+    <Content Include="Guest\img\asia.png" />
+    <Content Include="Guest\img\australia.png" />
+    <Content Include="Guest\img\banner.jpg" />
+    <Content Include="Guest\img\button-curve.png" />
+    <Content Include="Guest\img\dots-3.png" />
+    <Content Include="Guest\img\europe.png" />
+    <Content Include="Guest\img\logo.png" />
+    <Content Include="Guest\img\north-america.png" />
+    <Content Include="Guest\img\south-america.png" />
+    <Content Include="Guest\img\tm-img-01.jpg" />
+    <Content Include="Guest\img\tm-img-02.jpg" />
+    <Content Include="Guest\img\tm-img-03.jpg" />
+    <Content Include="Guest\img\tm-img-04.jpg" />
+    <Content Include="Guest\img\tm-img-05.jpg" />
+    <Content Include="Guest\img\tm-img-06.jpg" />
+    <Content Include="Guest\img\tm-img-07.jpg" />
+    <Content Include="Guest\IndustryPass.aspx" />
+    <Content Include="Guest\IndustryReg.aspx" />
+    <Content Include="Guest\js\bootstrap.min.js" />
+    <Content Include="Guest\js\datepicker.min.js" />
+    <Content Include="Guest\js\jquery-1.11.3.min.js" />
+    <Content Include="Guest\js\jquery.scrollTo.min.js" />
+    <Content Include="Guest\js\jquery.singlePageNav.min.js" />
+    <Content Include="Guest\js\popper.min.js" />
+    <Content Include="Guest\JustPass.aspx" />
+    <Content Include="Guest\LoginForm.aspx" />
+    <Content Include="Guest\slick\ajax-loader.gif" />
+    <Content Include="Guest\slick\fonts\slick.svg" />
+    <Content Include="Guest\slick\slick-theme.css" />
+    <Content Include="Guest\slick\slick.css" />
+    <Content Include="Guest\slick\slick.js" />
+    <Content Include="Guest\slick\slick.min.js" />
+    <Content Include="Industry\AddDate.aspx" />
+    <Content Include="Industry\AcceptedRequest.aspx" />
+    <Content Include="Industry\AssignMember.aspx" />
+    <Content Include="Industry\ChangePass.aspx" />
+    <Content Include="Industry\css\bootstrap.min.css" />
+    <Content Include="Industry\css\font-awesome.min.css" />
+    <Content Include="Industry\css\magnific-popup.css" />
+    <Content Include="Industry\css\owl.carousel.min.css" />
+    <Content Include="Industry\css\slicknav.min.css" />
+    <Content Include="Industry\css\style.css" />
+    <Content Include="Industry\icon-fonts\fontawesome-webfont.svg" />
+    <Content Include="Industry\img\about.jpg" />
+    <Content Include="Industry\img\blog\1.jpg" />
+    <Content Include="Industry\img\blog\2.jpg" />
+    <Content Include="Industry\img\blog\3.jpg" />
+    <Content Include="Industry\img\blog\blog-icons.png" />
+    <Content Include="Industry\img\blog\recent-post\1.jpg" />
+    <Content Include="Industry\img\blog\recent-post\2.jpg" />
+    <Content Include="Industry\img\blog\recent-post\3.jpg" />
+    <Content Include="Industry\img\clients\1.png" />
+    <Content Include="Industry\img\clients\2.png" />
+    <Content Include="Industry\img\clients\3.png" />
+    <Content Include="Industry\img\clients\4.png" />
+    <Content Include="Industry\img\clients\5.png" />
+    <Content Include="Industry\img\favicon.ico" />
+    <Content Include="Industry\img\features-bg.jpg" />
+    <Content Include="Industry\img\features\1.jpg" />
+    <Content Include="Industry\img\features\2.jpg" />
+    <Content Include="Industry\img\features\3.jpg" />
+    <Content Include="Industry\img\hero-slider\1.jpg" />
+    <Content Include="Industry\img\hero-slider\2.jpg" />
+    <Content Include="Industry\img\icons\cogwheel.png" />
+    <Content Include="Industry\img\icons\helmet.png" />
+    <Content Include="Industry\img\icons\light-bulb.png" />
+    <Content Include="Industry\img\icons\light.png" />
+    <Content Include="Industry\img\icons\map-marker.png" />
+    <Content Include="Industry\img\icons\phone.png" />
+    <Content Include="Industry\img\icons\plug.png" />
+    <Content Include="Industry\img\icons\pollution.png" />
+    <Content Include="Industry\img\icons\pumpjack.png" />
+    <Content Include="Industry\img\icons\traffic-cone.png" />
+    <Content Include="Industry\img\icons\wind-engine.png" />
+    <Content Include="Industry\img\icons\worker.png" />
+    <Content Include="Industry\img\logo-contact.png" />
+    <Content Include="Industry\img\logo-light.png" />
+    <Content Include="Industry\img\logo.png" />
+    <Content Include="Industry\img\milestones-bg.jpg" />
+    <Content Include="Industry\img\page-top-bg\1.jpg" />
+    <Content Include="Industry\img\page-top-bg\2.jpg" />
+    <Content Include="Industry\img\page-top-bg\3.jpg" />
+    <Content Include="Industry\img\page-top-bg\4.jpg" />
+    <Content Include="Industry\img\sign.png" />
+    <Content Include="Industry\img\team\1.jpg" />
+    <Content Include="Industry\img\team\2.jpg" />
+    <Content Include="Industry\img\team\3.jpg" />
+    <Content Include="Industry\img\testimonial-bg.jpg" />
+    <Content Include="Industry\img\testimonial-thumb.jpg" />
+    <Content Include="Industry\img\video-box.jpg" />
+    <Content Include="Industry\IndustryHome.aspx" />
+    <Content Include="Industry\js\bootstrap.min.js" />
+    <Content Include="Industry\js\circle-progress.min.js" />
+    <Content Include="Industry\js\jquery-3.2.1.min.js" />
+    <Content Include="Industry\js\jquery.magnific-popup.min.js" />
+    <Content Include="Industry\js\jquery.slicknav.min.js" />
+    <Content Include="Industry\js\main.js" />
+    <Content Include="Industry\js\owl.carousel.min.js" />
+    <Content Include="Industry\MemberReg.aspx" />
+    <Content Include="Industry\MyProfile.aspx" />
+    <Content Include="Industry\RequestView.aspx" />
+    <Content Include="Industry\SectionReg.aspx" />
+    <Content Include="Industry\Source\photo credits - industrial.txt" />
+    <Content Include="Industry\ViewPayment.aspx" />
+    <Content Include="payment\css_pirobox\bg_tms.jpg" />
+    <Content Include="payment\css_pirobox\black\ajax-loader_b.gif" />
+    <Content Include="payment\css_pirobox\black\bg_load.gif" />
+    <Content Include="payment\css_pirobox\black\bg_load.png" />
+    <Content Include="payment\css_pirobox\black\b_c.png" />
+    <Content Include="payment\css_pirobox\black\b_l.png" />
+    <Content Include="payment\css_pirobox\black\b_r.png" />
+    <Content Include="payment\css_pirobox\black\c.png" />
+    <Content Include="payment\css_pirobox\black\close_btn3.png" />
+    <Content Include="payment\css_pirobox\black\c_l.png" />
+    <Content Include="payment\css_pirobox\black\c_r.png" />
+    <Content Include="payment\css_pirobox\black\img_bg.png" />
+    <Content Include="payment\css_pirobox\black\link_out.gif" />
+    <Content Include="payment\css_pirobox\black\link_out.png" />
+    <Content Include="payment\css_pirobox\black\link_out_h.gif" />
+    <Content Include="payment\css_pirobox\black\link_out_h.png" />
+    <Content Include="payment\css_pirobox\black\next.png" />
+    <Content Include="payment\css_pirobox\black\nextoutside.png" />
+    <Content Include="payment\css_pirobox\black\nextoutside_h.png" />
+    <Content Include="payment\css_pirobox\black\next_h.png" />
+    <Content Include="payment\css_pirobox\black\pause.png" />
+    <Content Include="payment\css_pirobox\black\pause_h.png" />
+    <Content Include="payment\css_pirobox\black\play.png" />
+    <Content Include="payment\css_pirobox\black\play_h.png" />
+    <Content Include="payment\css_pirobox\black\prev.png" />
+    <Content Include="payment\css_pirobox\black\prevoutside.png" />
+    <Content Include="payment\css_pirobox\black\prevoutside_h.png" />
+    <Content Include="payment\css_pirobox\black\prev_h.png" />
+    <Content Include="payment\css_pirobox\black\style.css" />
+    <Content Include="payment\css_pirobox\black\t_c.png" />
+    <Content Include="payment\css_pirobox\black\t_l.png" />
+    <Content Include="payment\css_pirobox\black\t_r.png" />
+    <Content Include="payment\css_pirobox\css_page.css" />
+    <Content Include="payment\css_pirobox\shadow\ajax-loader_b.gif" />
+    <Content Include="payment\css_pirobox\shadow\bg_load.gif" />
+    <Content Include="payment\css_pirobox\shadow\bg_load.png" />
+    <Content Include="payment\css_pirobox\shadow\b_c.png" />
+    <Content Include="payment\css_pirobox\shadow\b_l.png" />
+    <Content Include="payment\css_pirobox\shadow\b_r.png" />
+    <Content Include="payment\css_pirobox\shadow\close_btn3.png" />
+    <Content Include="payment\css_pirobox\shadow\c_l.png" />
+    <Content Include="payment\css_pirobox\shadow\c_r.png" />
+    <Content Include="payment\css_pirobox\shadow\img_bg.png" />
+    <Content Include="payment\css_pirobox\shadow\link_out.gif" />
+    <Content Include="payment\css_pirobox\shadow\link_out.png" />
+    <Content Include="payment\css_pirobox\shadow\link_out_h.gif" />
+    <Content Include="payment\css_pirobox\shadow\link_out_h.png" />
+    <Content Include="payment\css_pirobox\shadow\next.png" />
+    <Content Include="payment\css_pirobox\shadow\nextoutside.png" />
+    <Content Include="payment\css_pirobox\shadow\nextoutside_h.png" />
+    <Content Include="payment\css_pirobox\shadow\next_h.png" />
+    <Content Include="payment\css_pirobox\shadow\pause.png" />
+    <Content Include="payment\css_pirobox\shadow\pause_h.png" />
+    <Content Include="payment\css_pirobox\shadow\play.png" />
+    <Content Include="payment\css_pirobox\shadow\play_h.png" />
+    <Content Include="payment\css_pirobox\shadow\prev.png" />
+    <Content Include="payment\css_pirobox\shadow\prevoutside.png" />
+    <Content Include="payment\css_pirobox\shadow\prevoutside_h.png" />
+    <Content Include="payment\css_pirobox\shadow\prev_h.png" />
+    <Content Include="payment\css_pirobox\shadow\style.css" />
+    <Content Include="payment\css_pirobox\shadow\t_c.png" />
+    <Content Include="payment\css_pirobox\shadow\t_l.png" />
+    <Content Include="payment\css_pirobox\shadow\t_r.png" />
+    <Content Include="payment\css_pirobox\shad_bg.jpg" />
+    <Content Include="payment\css_pirobox\white\ajax-loader_b.gif" />
+    <Content Include="payment\css_pirobox\white\ajax-loader_w.gif" />
+    <Content Include="payment\css_pirobox\white\bg_load.gif" />
+    <Content Include="payment\css_pirobox\white\bg_load.png" />
+    <Content Include="payment\css_pirobox\white\bg_load_w.png" />
+    <Content Include="payment\css_pirobox\white\b_c.png" />
+    <Content Include="payment\css_pirobox\white\b_l.png" />
+    <Content Include="payment\css_pirobox\white\b_r.png" />
+    <Content Include="payment\css_pirobox\white\c.png" />
+    <Content Include="payment\css_pirobox\white\close_btn3.png" />
+    <Content Include="payment\css_pirobox\white\credits_bg.png" />
+    <Content Include="payment\css_pirobox\white\c_l.png" />
+    <Content Include="payment\css_pirobox\white\c_r.png" />
+    <Content Include="payment\css_pirobox\white\img_bg.png" />
+    <Content Include="payment\css_pirobox\white\link_out.gif" />
+    <Content Include="payment\css_pirobox\white\link_out.png" />
+    <Content Include="payment\css_pirobox\white\link_out_h.gif" />
+    <Content Include="payment\css_pirobox\white\link_out_h.png" />
+    <Content Include="payment\css_pirobox\white\next.png" />
+    <Content Include="payment\css_pirobox\white\nextoutside.png" />
+    <Content Include="payment\css_pirobox\white\nextoutside_h.png" />
+    <Content Include="payment\css_pirobox\white\next_h.png" />
+    <Content Include="payment\css_pirobox\white\pause.png" />
+    <Content Include="payment\css_pirobox\white\pause_h.png" />
+    <Content Include="payment\css_pirobox\white\pirobox_down.png" />
+    <Content Include="payment\css_pirobox\white\play.png" />
+    <Content Include="payment\css_pirobox\white\play_h.png" />
+    <Content Include="payment\css_pirobox\white\prev.png" />
+    <Content Include="payment\css_pirobox\white\prevoutside.png" />
+    <Content Include="payment\css_pirobox\white\prevoutside_h.png" />
+    <Content Include="payment\css_pirobox\white\prev_h.png" />
+    <Content Include="payment\css_pirobox\white\style.css" />
+    <Content Include="payment\css_pirobox\white\t_c.png" />
+    <Content Include="payment\css_pirobox\white\t_l.png" />
+    <Content Include="payment\css_pirobox\white\t_r.png" />
+    <Content Include="payment\fifth.aspx" />
+    <Content Include="payment\First.aspx" />
+    <Content Include="payment\fourth.aspx" />
+    <Content Include="payment\Icons\1391796956_payment_method_master_card.png" />
+    <Content Include="payment\Icons\1391796960_payment_method_card_visa.png" />
+    <Content Include="payment\Icons\1391813453_mastercard1.gif" />
+    <Content Include="payment\Icons\1391813456_visa2.gif" />
+    <Content Include="payment\Icons\1391813466_westernunion.gif" />
+    <Content Include="payment\Icons\1391813469_cirrus1.gif" />
+    <Content Include="payment\Icons\1391813512_paypal.png" />
+    <Content Include="payment\Icons\1391813513_visa1.gif" />
+    <Content Include="payment\Icons\1391813515_credit_card.png" />
+    <Content Include="payment\Icons\1391813769_printer.png" />
+    <Content Include="payment\Images\1391796956_payment_method_master_card.png" />
+    <Content Include="payment\Images\1391796960_payment_method_card_visa.png" />
+    <Content Include="payment\Images\dp_hm_slider03.jpg" />
+    <Content Include="payment\Images\firstdataglobal_cardinal_centinel_3d-secure_b909dac69bbd832054c1bf467e389c8f_verified_by_visa_1.gif" />
+    <Content Include="payment\Images\ImgSml_PaymentGateway.jpg" />
+    <Content Include="payment\Images\loading.gif" />
+    <Content Include="payment\Images\msc.gif" />
+    <Content Include="payment\Images\payment-gateway-security.jpg" />
+    <Content Include="payment\Images\payment_gateway.png" />
+    <Content Include="payment\Images\Process1.JPG" />
+    <Content Include="payment\Images\Process2.JPG" />
+    <Content Include="payment\Images\secure.jpg" />
+    <Content Include="payment\Images\seq.JPG" />
+    <Content Include="payment\Images\vbv.gif" />
+    <Content Include="payment\second.aspx" />
+    <Content Include="payment\third.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CategoryAdd.aspx.cs">
+      <DependentUpon>CategoryAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CategoryAdd.aspx.designer.cs">
+      <DependentUpon>CategoryAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CategoryView.aspx.cs">
+      <DependentUpon>CategoryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CategoryView.aspx.designer.cs">
+      <DependentUpon>CategoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerviewReport.aspx.cs">
+      <DependentUpon>CustomerviewReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerviewReport.aspx.designer.cs">
+      <DependentUpon>CustomerviewReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DistrictReg.aspx.cs">
+      <DependentUpon>DistrictReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DistrictReg.aspx.designer.cs">
+      <DependentUpon>DistrictReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DistrictView.aspx.cs">
+      <DependentUpon>DistrictView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DistrictView.aspx.designer.cs">
+      <DependentUpon>DistrictView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DistrictwisecustomerReport.aspx.cs">
+      <DependentUpon>DistrictwisecustomerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DistrictwisecustomerReport.aspx.designer.cs">
+      <DependentUpon>DistrictwisecustomerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DistrictwiseindustryReport.aspx.cs">
+      <DependentUpon>DistrictwiseindustryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DistrictwiseindustryReport.aspx.designer.cs">
+      <DependentUpon>DistrictwiseindustryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IndustryConform.aspx.cs">
+      <DependentUpon>IndustryConform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IndustryConform.aspx.designer.cs">
+      <DependentUpon>IndustryConform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IndustrypackegeReport.aspx.cs">
+      <DependentUpon>IndustrypackegeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IndustrypackegeReport.aspx.designer.cs">
+      <DependentUpon>IndustrypackegeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IndustryviewReport.aspx.cs">
+      <DependentUpon>IndustryviewReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IndustryviewReport.aspx.designer.cs">
+      <DependentUpon>IndustryviewReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LocationReg.aspx.cs">
+      <DependentUpon>LocationReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LocationReg.aspx.designer.cs">
+      <DependentUpon>LocationReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LocationView.aspx.cs">
+      <DependentUpon>LocationView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LocationView.aspx.designer.cs">
+      <DependentUpon>LocationView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MonthwiseReport.aspx.cs">
+      <DependentUpon>MonthwiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MonthwiseReport.aspx.designer.cs">
+      <DependentUpon>MonthwiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RequestPie.aspx.cs">
+      <DependentUpon>RequestPie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RequestPie.aspx.designer.cs">
+      <DependentUpon>RequestPie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SampleForm.aspx.cs">
+      <DependentUpon>SampleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SampleForm.aspx.designer.cs">
+      <DependentUpon>SampleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SampleView.aspx.cs">
+      <DependentUpon>SampleView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SampleView.aspx.designer.cs">
+      <DependentUpon>SampleView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\YearwiseReport.aspx.cs">
+      <DependentUpon>YearwiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\YearwiseReport.aspx.designer.cs">
+      <DependentUpon>YearwiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\AssignMemberView.aspx.cs">
+      <DependentUpon>AssignMemberView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\AssignMemberView.aspx.designer.cs">
+      <DependentUpon>AssignMemberView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ConformationView.aspx.cs">
+      <DependentUpon>ConformationView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ConformationView.aspx.designer.cs">
+      <DependentUpon>ConformationView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerHome.aspx.cs">
+      <DependentUpon>CustomerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerHome.aspx.designer.cs">
+      <DependentUpon>CustomerHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerMaster.Master.cs">
+      <DependentUpon>CustomerMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMaster.Master.designer.cs">
+      <DependentUpon>CustomerMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ProfileView.aspx.cs">
+      <DependentUpon>ProfileView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ProfileView.aspx.designer.cs">
+      <DependentUpon>ProfileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ViewMore.aspx.cs">
+      <DependentUpon>ViewMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ViewMore.aspx.designer.cs">
+      <DependentUpon>ViewMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DbOperation.cs" />
+    <Compile Include="Guest\CustomerReg.aspx.cs">
+      <DependentUpon>CustomerReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\CustomerReg.aspx.designer.cs">
+      <DependentUpon>CustomerReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\ForgotPass.aspx.cs">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\ForgotPass.aspx.designer.cs">
+      <DependentUpon>ForgotPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\GuestHome.aspx.cs">
+      <DependentUpon>GuestHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\GuestHome.aspx.designer.cs">
+      <DependentUpon>GuestHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\GuestMaster.Master.cs">
+      <DependentUpon>GuestMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\GuestMaster.Master.designer.cs">
+      <DependentUpon>GuestMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\IndustryPass.aspx.cs">
+      <DependentUpon>IndustryPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\IndustryPass.aspx.designer.cs">
+      <DependentUpon>IndustryPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\IndustryReg.aspx.cs">
+      <DependentUpon>IndustryReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\IndustryReg.aspx.designer.cs">
+      <DependentUpon>IndustryReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\JustPass.aspx.cs">
+      <DependentUpon>JustPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\JustPass.aspx.designer.cs">
+      <DependentUpon>JustPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\LoginForm.aspx.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest\LoginForm.aspx.designer.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\AddDate.aspx.cs">
+      <DependentUpon>AddDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\AddDate.aspx.designer.cs">
+      <DependentUpon>AddDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\AcceptedRequest.aspx.cs">
+      <DependentUpon>AcceptedRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\AcceptedRequest.aspx.designer.cs">
+      <DependentUpon>AcceptedRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\AssignMember.aspx.cs">
+      <DependentUpon>AssignMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\AssignMember.aspx.designer.cs">
+      <DependentUpon>AssignMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\IndustryHome.aspx.cs">
+      <DependentUpon>IndustryHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\IndustryHome.aspx.designer.cs">
+      <DependentUpon>IndustryHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\IndustryMaster.Master.cs">
+      <DependentUpon>IndustryMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\IndustryMaster.Master.designer.cs">
+      <DependentUpon>IndustryMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\MemberReg.aspx.cs">
+      <DependentUpon>MemberReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\MemberReg.aspx.designer.cs">
+      <DependentUpon>MemberReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\RequestView.aspx.cs">
+      <DependentUpon>RequestView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\RequestView.aspx.designer.cs">
+      <DependentUpon>RequestView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\SectionReg.aspx.cs">
+      <DependentUpon>SectionReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\SectionReg.aspx.designer.cs">
+      <DependentUpon>SectionReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Industry\ViewPayment.aspx.cs">
+      <DependentUpon>ViewPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Industry\ViewPayment.aspx.designer.cs">
+      <DependentUpon>ViewPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment\fifth.aspx.cs">
+      <DependentUpon>fifth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment\fifth.aspx.designer.cs">
+      <DependentUpon>fifth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment\First.aspx.cs">
+      <DependentUpon>First.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment\First.aspx.designer.cs">
+      <DependentUpon>First.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment\fourth.aspx.cs">
+      <DependentUpon>fourth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment\fourth.aspx.designer.cs">
+      <DependentUpon>fourth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment\PaymentMaster.Master.cs">
+      <DependentUpon>PaymentMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment\PaymentMaster.Master.designer.cs">
+      <DependentUpon>PaymentMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="payment\second.aspx.cs">
+      <DependentUpon>second.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment\second.aspx.designer.cs">
+      <DependentUpon>second.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment\third.aspx.cs">
+      <DependentUpon>third.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment\third.aspx.designer.cs">
+      <DependentUpon>third.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminMaster.Master" />
+    <Content Include="Admin\lib\owlcarousel\LICENSE" />
+    <Content Include="Admin\scss\bootstrap.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_card.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_close.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_images.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_root.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_type.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="Admin\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Guest\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Guest\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Guest\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Guest\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Guest\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Guest\slick\config.rb" />
+    <Content Include="Guest\slick\fonts\slick.eot" />
+    <Content Include="Guest\slick\fonts\slick.ttf" />
+    <Content Include="Guest\slick\fonts\slick.woff" />
+    <Content Include="Guest\slick\slick-theme.less" />
+    <Content Include="Guest\slick\slick-theme.scss" />
+    <Content Include="Guest\slick\slick.less" />
+    <Content Include="Guest\slick\slick.scss" />
+    <Content Include="Guest\GuestMaster.Master" />
+    <Content Include="Customer\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Customer\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Customer\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Customer\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Customer\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Customer\slick\config.rb" />
+    <Content Include="Customer\slick\fonts\slick.eot" />
+    <Content Include="Customer\slick\fonts\slick.ttf" />
+    <Content Include="Customer\slick\fonts\slick.woff" />
+    <Content Include="Customer\slick\slick-theme.less" />
+    <Content Include="Customer\slick\slick-theme.scss" />
+    <Content Include="Customer\slick\slick.less" />
+    <Content Include="Customer\slick\slick.scss" />
+    <Content Include="Customer\CustomerMaster.Master" />
+    <Content Include="Industry\icon-fonts\fontawesome-webfont.eot" />
+    <Content Include="Industry\icon-fonts\fontawesome-webfont.woff" />
+    <Content Include="Industry\icon-fonts\fontawesome-webfont.woff2" />
+    <Content Include="Industry\Source\bootstrap-4.3.1-dist.zip" />
+    <Content Include="Industry\Source\font-awesome-4.7.0.zip" />
+    <Content Include="Industry\Source\jquery-circle-progress-1.2.2.tar.gz" />
+    <Content Include="Industry\Source\Magnific-Popup-master.zip" />
+    <Content Include="Industry\Source\OwlCarousel2-2.3.4_2.zip" />
+    <Content Include="Industry\Source\sass.zip" />
+    <Content Include="Industry\Source\SlickNav-master.zip" />
+    <Content Include="Industry\IndustryMaster.Master" />
+    <None Include="packages.config" />
+    <Content Include="payment\Icons\Thumbs.db" />
+    <Content Include="payment\PaymentMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54085</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54085/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
